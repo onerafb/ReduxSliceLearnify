@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Home from "./Pages/Home";
 import Navbar from "./components/Navbar";
 import Courses from "./Pages/Courses";
@@ -13,13 +14,14 @@ import PaymentFail from "./Pages/PaymentFail";
 import PageNotFound from "./Pages/PageNotFound";
 import Subscribe from "./Pages/Subscribe";
 import CoursePage from "./Pages/CoursePage";
-import Footer from "./components/Footer";
 import Profile from "./Pages/Profile";
 import UpdateProfile from "./Pages/UpdateProfile";
 import ChangePassword from "./Pages/ChangePassword";
 import CreateCourses from "./admin/CreateCourses";
 import AdminCourses from "./admin/AdminCourses";
 import Users from "./admin/Users";
+
+
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -183,8 +185,6 @@ const App = () => {
               }
             />
 
-            <Route path="/footer" element={<Footer />} />
-            {/* admin */}
             <Route
               path="/admin/createcourses"
               element={
@@ -222,6 +222,7 @@ const App = () => {
               }
             />
           </Routes>
+
           <ToastContainer />
         </>
       )}
